@@ -1,0 +1,13 @@
+1 - Dia de semana?
+2 - Não 
+      1 - Desportador desligado
+      2 - Acordo naturalmente
+      3 - Olhar as horas
+      4 - Ja são 9 ou mais
+        Não
+         1 - Volto a dormir
+       Sim
+         2 - Levanto e começo o dia
+3 - Sim 
+      1 - Despertador toca as 6:30
+      2 - Levantar e começar o dia
