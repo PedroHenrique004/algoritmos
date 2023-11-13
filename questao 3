@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+
+typedef struct cadastro {
+    char nome[30];
+    int idade;
+    char endereco[40];
+} Cadastro;
+
+Cadastro* criaListaDecadastro(int n){
+    //Cadasttro cadastro[n] -. alocação estatica
+    Cadastro* cadastros = (Cadastro*) malloc(n*sizeof(Cadastro));
+    return cadastros;
+}
+
+int main(){
+    int n;
+    printf("insira um número de cadastros");
+    scanf("%d" , &n);
+    Cadastro* cadastros = criaListaDecadastro(n);
+
+    //cadastros é u ponteiro
+    //printf("valor de cadastros: %p\n", cadastros);
+    //ponteiro guarda endereço de memoria
+    //*cadastros -> acessa o valor do 1 endereço de memoria usado por cadastros 
+    //*(cadastros + 1)-> acessa o valor do 2 endereço de memoria usado por cadastros 
+    //(*cadastros),nome -> acessar o nome da 1 struct
+
+
+ 
+
+    for (int i = 0; i < n; i++){
+        printf("nome: \n");
+        scanf("%s", cadastros[i].nome);
+        printf("idade: \n");
+        scanf("%d", &cadastros[i].idade);
+        printf("endereco: \n");
+        scanf("%s", cadastros[i].endereco);
+
+    }
+
+       printf("pessoas cadastradas: \n");
+       for (int i = 0; i < n; i++){
+            printf("nome: %s\n", cadastros[i].nome);
+            printf("idade: %d\n", cadastros[i].idade);
+            printf("endereco: %s\n", cadastros[i].endereco);
+       }
+
+
+
+
+    return 0;
+}
+
+
