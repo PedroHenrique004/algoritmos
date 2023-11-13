@@ -1,0 +1,23 @@
+#include <stdio.h>
+// typedef é para dar apelido que está depois dos parenteses da struct
+//
+//
+typedef struct aluno {
+    int matricula; //4 bytes
+    char nome[30]; //30 bytes
+    float notas[3];
+
+} Aluno;
+
+
+int main() {
+    //esse Aluno vem do apelido
+    Aluno aluno1;
+    printf("tamanho da struct aluno: %d bytes\n", sizeof(Aluno));
+
+    // em teoria daria 46 mas da erro no windows e ele mostra 48
+    // pra corrigir é so printar elas individualmente 
+
+
+return 0;
+}
